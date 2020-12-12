@@ -1,24 +1,50 @@
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ejemplos JSP</title>
-</head>
-<body>
-    <H1>Programacion para redes ejemplo factorial</H1>
-    <p>
-    	IÑIGUEZ DURAZNO MANUEL
-	QUIROZ SÁNCHEZ CHRISTOPHER
-	ROSERO ALBUJA DENNIS
-	SÁNCHEZ ROMERO JORGE
-	VIZUETE GARCÍA MICHAEL
-<p/>
-    
-    <%
-        int numero = 7, factorial = 1;
-        for(int i=numero; i>1; i--) {
-            factorial *= i;            
-        }
-    %>
-    <%-- Se muestran en negrita el número y el resultado del factorial --%>
-    <%= "El factorial de <b>"+numero+"</b> es <b>"+factorial+"</b>" %> 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Grupo6.webService;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+/**
+ *
+ * @author windows
+ */
+@WebService(serviceName = "ConversionUnidades")
+public class ConversionUnidades {
+
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "CentimetrosAPulgadas")
+    public double CentimetrosAPulgadas(@WebParam(name = "Centimetros") double Centimetros) {
+        //TODO write your implementation code here:
+        return Centimetros/2.54;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "PulgadasACentimetros")
+    public double PulgadasACentimetros(@WebParam(name = "Pulgadas") double Pulgadas) {
+        //TODO write your implementation code here:
+        return Pulgadas*2.54;
+        
+        /*
+IÑIGUEZ DURAZNO MANUEL
+QUIROZ SÁNCHEZ CHRISTOPHER
+ROSERO ALBUJA DENNIS
+SÁNCHEZ ROMERO JORGE
+VIZUETE GARCÍA MICHAELA 
+        */
+        
+    }
+}
+
+
+
     
