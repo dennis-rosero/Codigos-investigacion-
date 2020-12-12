@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ejemplos JSP</title>
+</head>
+<body>
+    <H1>Ejemplo de scriplet</H1>
+    <p>
+IÑIGUEZ DURAZNO MANUEL
+QUIROZ SÁNCHEZ CHRISTOPHER
+ROSERO ALBUJA DENNIS
+SÁNCHEZ ROMERO JORGE
+VIZUETE GARCÍA MICHAELA 
+    </p>
+    <%
+        int numero = 7, factorial = 1;
+        for(int i=numero; i>1; i--) {
+            factorial *= i;            
+        }
+    %>
+    <%-- Se muestran en negrita el número y el resultado del factorial --%>
+    <%= "El factorial de <b>"+numero+"</b> es <b>"+factorial+"</b>" %>    
